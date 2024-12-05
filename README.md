@@ -22,10 +22,6 @@ Cette enquête a été réalisé dans le cadre du cours La Vie sociale des Donn�
 
 <p align="justify">Dictumst at id iaculis condimentum taciti litora leo cursus potenti. Phasellus leo platea in scelerisque per odio urna. Feugiat interdum senectus fusce porta dapibus rhoncus orci sagittis. Elementum ornare consectetur justo maecenas suscipit placerat! Nibh aenean mauris nullam finibus class habitasse enim. Nisi felis velit accumsan fermentum nec purus. Lectus maximus metus eu commodo mauris nec proin dictum. Velit dui suspendisse ex lectus tristique vel. Nibh proin primis aliquam ligula porta.</p>
 
-<body>
-  
-
-
   <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="https://coralieroffe.github.io/indice.de.reparabilite.github.io/">Indice de réparabilité</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
