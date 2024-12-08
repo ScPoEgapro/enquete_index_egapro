@@ -198,3 +198,18 @@ footer {
 ul li a.active {
     font-weight: bold;
 }
+
+
+.summary-box ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.summary-box ul li a:hover {
+    text-decoration: underline;
+}
+
+.summary-box ul li a.active {
+    font-weight: bold;
+    color: #4CAF50;
+}
