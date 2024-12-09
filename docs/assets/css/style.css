@@ -1,11 +1,10 @@
-/* Styles généraux */
 body {
-    font-family: Arial, sans-serif; /* Utilise Arial, avec sans-serif en fallback */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Conserve la structure */
+    min-height: 100vh;
 }
 
 header {
@@ -15,20 +14,18 @@ header {
     text-align: center;
 }
 
-/* Style pour l'image */
 .header-logo {
-    width: 150px; /* Ajustez la taille */
-    height: auto; /* Conserve les proportions */
+    width: 150px;
+    height: auto;
     position: absolute;
-    top: 10px; /* Ajuste l'écart par rapport au haut */
-    right: 10px; /* Ajuste l'écart par rapport à la droite */
+    top: 10px;
+    right: 10px;
 }
 
 h1 {
     margin: 0;
 }
 
-/* Styles pour le menu */
 .menu {
     background-color: #333;
     overflow: hidden;
@@ -58,7 +55,6 @@ h1 {
     background-color: #575757;
 }
 
-/* Dropdown */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -79,83 +75,75 @@ h1 {
     display: block;
 }
 
-/* Main content */
 main {
-    flex: 1; /* Permet au contenu de s'étirer pour remplir l'espace */
-    padding-bottom: 20px; /* Ajoute de l'espace au bas pour éviter que le footer touche le contenu */
+    flex: 1;
+    padding-bottom: 20px;
     margin: 0;
     text-align: justify;
 }
 
-/* Conteneur pour aligner les cases */
 .cases-container {
     position: fixed;
-    top: 70px; /* Au-dessus des fenêtres */
-    left: 60px; /* Alignées à gauche */
+    top: 70px;
+    left: 60px;
     display: flex;
-    gap: 10px; /* Espacement entre les deux cases */
-    z-index: 200; /* Toujours au-dessus des fenêtres */
+    gap: 10px;
+    z-index: 200;
 }
 
-/* Style des cases */
 .references-toggle, .summary-toggle {
-    width: 50px; /* Carrées */
-    height: 50px; /* Carrées */
+    width: 50px;
+    height: 50px;
     background-color: #4CAF50;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px; /* Taille des icônes */
-    border-radius: 5px; /* Coins légèrement arrondis */
+    font-size: 24px;
+    border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Icônes */
 .references-toggle .icon,
 .summary-toggle .icon {
-    font-size: 24px; /* Taille des icônes */
+    font-size: 24px;
 }
 
-/* Fenêtre Références */
 .references-box, .summary-box {
     position: fixed;
-    top: 140px; /* Sous les cases */
+    top: 140px;
     left: 15px;
-    width: 200px; /* Largeur des fenêtres */
+    width: 200px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 14px;
-    overflow-y: auto; /* Barre de défilement si nécessaire */
-    max-height: calc(100vh - 200px); /* Gère la hauteur */
-    display: none; /* Cachée par défaut */
-    z-index: 101; /* Sous les cases */
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    display: none;
+    z-index: 101;
 }
 
-/* Titre des fenêtres */
 .references-box h3, .summary-box h3 {
     margin-top: 0;
     font-size: 16px;
     text-align: center;
-    cursor: pointer; /* Permet de fermer la fenêtre */
+    cursor: pointer;
     background-color: #4CAF50;
     color: white;
     padding: 5px;
     border-radius: 3px;
 }
 
-/* Zone de contenu */
 .content {
     margin-left: 230px;
-    margin-right: 60px; /* Décalage pour le bouton Sommaire à droite */
+    margin-right: 60px;
     padding: 20px;
     text-align: justify;
 }
 
-/* Liens de références */
 .content a {
     text-decoration: none;
     color: #4CAF50;
@@ -165,7 +153,6 @@ main {
     text-decoration: underline;
 }
 
-/* Intégration de l'image */
 figure {
     margin: 20px auto;
     text-align: center;
@@ -190,9 +177,9 @@ footer {
     background-color: #4CAF50;
     color: white;
     padding: 10px 0;
-    position: relative; /* Pas de chevauchement */
+    position: relative;
     width: 100%;
-    margin-top: 10px; /* Sépare légèrement le footer du contenu principal */
+    margin-top: 10px;
 }
 
 ul li a.active {
@@ -214,40 +201,36 @@ ul li a.active {
     color: #4CAF50;
 }
 
-/* Style pour le conteneur du calculateur */
 .calculateur-container {
     margin: 20px auto;
-    max-width: 600px; /* Largeur maximale pour centrer le formulaire */
+    max-width: 600px;
     padding: 20px;
-    background-color: #f9f9f9; /* Fond clair */
-    border: 1px solid #ccc; /* Bordure légère */
-    border-radius: 5px; /* Coins arrondis */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    font-size: 16px; /* Taille de texte agréable à lire */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
     text-align: left;
 }
 
-/* Style pour les labels */
 .calculateur-container label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-/* Style pour les champs de saisie */
 .calculateur-container input {
-    width: calc(100% - 20px); /* Remplit la largeur disponible */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; /* Bordure légère */
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px; /* Taille de texte agréable */
+    font-size: 14px;
 }
 
-/* Style pour le bouton de calcul */
 .calculateur-container button {
     display: inline-block;
-    background-color: #4CAF50; /* Couleur principale */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -257,12 +240,10 @@ ul li a.active {
     transition: background-color 0.3s;
 }
 
-/* Hover pour le bouton */
 .calculateur-container button:hover {
     background-color: #45a049;
 }
 
-/* Style pour le résultat */
 #resultat {
     margin-top: 20px;
     padding: 10px;
