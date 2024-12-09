@@ -162,7 +162,9 @@ document.getElementById("calculer-index").addEventListener("click", function () 
     // Récupérer les valeurs du formulaire
     const totalFemmes = parseInt(document.getElementById("total-femmes").value) || 0;
     const totalHommes = parseInt(document.getElementById("total-hommes").value) || 0;
-    const ecartRemuneration = parseFloat(document.getElementById("ecart-remuneration").value) || 0;
+    const remunerationFemmes = parseFloat(document.getElementById("remuneration-femmes").value) || 0;
+    const remunerationHommes = parseFloat(document.getElementById("remuneration-hommes").value) || 0;
+    const ecartRemuneration = ((remunerationHommes - remunerationFemmes) / remunerationHommes) * 100;
     const femmesAugmentees = parseInt(document.getElementById("femmes-augmentees").value) || 0;
     const hommesAugmentes = parseInt(document.getElementById("hommes-augmentes").value) || 0;
     const femmesPromues = parseInt(document.getElementById("femmes-promues").value) || 0;
