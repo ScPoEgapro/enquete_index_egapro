@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur - Egapro LVSDD</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <img src="../assets/images/logoenqueteegapro.JPG" alt="Logo Egapro" class="header-logo">
+</head>
+    
+<body>
+        <header>
+    <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Enquête collective : L'index Egapro</a></h1>
+    <h2 style="margin-bottom: 5px;">La vie sociale des données - Semestre d'automne 2024-2025</h2>
+    <h3>
+        Par 
+        <a href="mailto:xxx@xxx.xx" style="text-decoration: none; color: inherit;">Silas Delahaye</a>, 
+        <a href="mailto:xxx@xxx.xx" style="text-decoration: none; color: inherit;">Jeanne Jault</a>, 
+        <a href="mailto:xxx@xxx.xx" style="text-decoration: none; color: inherit;">Grégoire Kraoul-Riera</a>, 
+        <a href="mailto:xxx@xxx.xx" style="text-decoration: none; color: inherit;">Léa Romain</a>
+    </h3>
+</header>
+
+        <main>
+
+    <div class="cases-container">
+    <div class="references-toggle" onclick="toggleReferences()">
+        <span class="icon">❝</span>
+    </div>
+    <div class="summary-toggle" onclick="toggleSummary()">
+        <span class="icon">☰</span>
+    </div>
+</div>
+
+<div class="references-box" style="display: none;">
+    <h3 onclick="toggleReferences()">Références</h3>
+    <ul>
+        <li id="ref1">[1] Explication pour la référence 1.</li>
+        <li id="ref2">[2] Détail de la source citée pour la référence 2.</li>
+        <li id="ref3">[3] Informations complémentaires pour la référence 3.</li>
+        <li id="ref4">[4] Référence à une étude pertinente.</li>
+        <li id="ref5">[5] Extrait d'une publication scientifique.</li>
+        <li id="ref6">[6] Source primaire sur le sujet.</li>
+        <li id="ref7">[7] Données statistiques associées.</li>
+        <li id="ref8">[8] Contexte historique de l'analyse.</li>
+        <li id="ref9">[9] Note explicative pour le lecteur.</li>
+        <li id="ref10">[10] Exemple illustratif.</li>
+        <li id="ref11">[11] Analyse détaillée.</li>
+        <li id="ref12">[12] Caution scientifique.</li>
+        <li id="ref13">[13] Étude complémentaire.</li>
+        <li id="ref14">[14] Point de vue critique.</li>
+        <li id="ref15">[15] Citation pertinente.</li>
+    </ul>
+</div>
+
+<!-- Fenêtre Sommaire (inchangée) -->
+<div class="summary-box" style="display: none;">
+    <h3 onclick="toggleSummary()">Sommaire</h3>
+    <ul>
+        <li><a href="../index.html">Page d'accueil</a></li>
+        <li><a href="intro.html">Introduction</a></li>
+        <li><a href="historique.html">Partie 1 : Historique</a></li>
+        <li><a href="mesure.html">Partie 2 : Mesure</a></li>
+        <li><a href="limites.html">Partie 3 : Limites</a></li>
+        <li><a href="conclu.html">Conclusion</a></li>
+        <li><a href="interview.html">Interview avec ...</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="calculateur.html" class="active">Calculateur</a></li>
+    </ul>
+</div>
+
+        <div class="content">
+            <h1 align="justify">
+                Calculateur de l'index Egapro</h1>
+          <p>À vous de jouer ! Utilisez notre simulateur pour calculer l'index Egapro d'une entreprise fictive à partir des informations nécessaires au calcul de chaque indice.</p>
+          <p>Tout est fidèle au modèle de calcul présent sur le site du Ministère du Travail <sup><a href="#ref1">[1]</a></sup>, sauf l'écart de rémunérations qui est simplifié.</p>
+
+        <form id="egapro-form">
+            <h2>Entrez les données de votre entreprise :</h2>
+
+            <label for="total-femmes">Total de femmes :</label>
+            <input type="number" id="total-femmes" required>
+
+            <label for="total-hommes">Total d'hommes :</label>
+            <input type="number" id="total-hommes" required>
+
+            <h3>Écart de rémunérations</h3>            
+            <label for="ecart-remuneration">Écart de rémunération (%) :</label>
+            <input type="number" id="ecart-remuneration" required step="0.01">
+
+            <h3>Augmentations individuelles</h3>
+            <label for="femmes-augmentees">Nombre de femmes augmentées :</label>
+            <input type="number" id="femmes-augmentees" required>
+
+            <label for="hommes-augmentes">Nombre d'hommes augmentés :</label>
+            <input type="number" id="hommes-augmentes" required>
+
+            <h3>Promotions (si applicable)</h3>
+            <label for="femmes-promues">Nombre de femmes promues :</label>
+            <input type="number" id="femmes-promues">
+            
+            <label for="hommes-promus">Nombre d'hommes promus :</label>
+            <input type="number" id="hommes-promus">
+
+            <h3>Congé maternité</h3>
+            <label for="pct-conge">Pourcentage de salariées augmentées après congé maternité :</label>
+            <input type="number" id="pct-conge" required step="0.01">
+
+            <h3>Représentation parmi les 10 plus hautes rémunérations</h3>
+            <label for="sous-represente">Nombre de salariés sous-représentés :</label>
+            <input type="number" id="sous-represente" required>
+
+            <button type="button" id="calculer-index">Calculer l'index</button>
+        </form>
+
+        <h2>Résultat :</h2>
+            <p id="resultat" style="display: none;"></p>                 
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 LVSDD Egapro</p>
+    </footer>
+
+<script>
+    function toggleReferences() {
+        const box = document.querySelector('.references-box');
+        const toggleSummary = document.querySelector('.summary-box');
+
+        // Cacher la fenêtre du sommaire si elle est ouverte
+        if (toggleSummary.style.display === 'block') {
+            toggleSummary.style.display = 'none';
+        }
+
+        // Afficher ou cacher la fenêtre Références
+        if (box.style.display === 'none' || box.style.display === '') {
+            box.style.display = 'block'; // Affiche la fenêtre
+        } else {
+            box.style.display = 'none'; // Cache la fenêtre
+        }
+    }
+
+    function toggleSummary() {
+        const box = document.querySelector('.summary-box');
+        const toggleReferences = document.querySelector('.references-box');
+
+        // Cacher la fenêtre des références si elle est ouverte
+        if (toggleReferences.style.display === 'block') {
+            toggleReferences.style.display = 'none';
+        }
+
+        // Afficher ou cacher la fenêtre Sommaire
+        if (box.style.display === 'none' || box.style.display === '') {
+            box.style.display = 'block'; // Affiche la fenêtre
+        } else {
+            box.style.display = 'none'; // Cache la fenêtre
+        }
+    }
+document.getElementById("calculer-index").addEventListener("click", function () {
+    // Récupérer les valeurs du formulaire
+    const totalFemmes = parseInt(document.getElementById("total-femmes").value) || 0;
+    const totalHommes = parseInt(document.getElementById("total-hommes").value) || 0;
+    const ecartRemuneration = parseFloat(document.getElementById("ecart-remuneration").value) || 0;
+    const femmesAugmentees = parseInt(document.getElementById("femmes-augmentees").value) || 0;
+    const hommesAugmentes = parseInt(document.getElementById("hommes-augmentes").value) || 0;
+    const femmesPromues = parseInt(document.getElementById("femmes-promues").value) || 0;
+    const hommesPromus = parseInt(document.getElementById("hommes-promus").value) || 0;
+    const pctConge = parseFloat(document.getElementById("pct-conge").value) || 0;
+    const sousRepresente = parseInt(document.getElementById("sous-represente").value) || 0;
+
+    if (isNaN(totalFemmes) || isNaN(totalHommes) || isNaN(ecartRemuneration)) {
+        alert("Veuillez remplir toutes les données obligatoires.");
+        return;
+    }
+
+    const effectifTotal = totalFemmes + totalHommes;
+
+    // Fonction pour calculer les points de l'écart de rémunération
+    function calculPointsRemuneration(ecart) {
+        if (ecart <= 0) return 40;
+        if (ecart <= 1) return 39;
+        if (ecart <= 2) return 38;
+        if (ecart <= 3) return 37;
+        if (ecart <= 4) return 36;
+        if (ecart <= 5) return 35;
+        if (ecart <= 6) return 34;
+        if (ecart <= 7) return 33;
+        if (ecart <= 8) return 31;
+        if (ecart <= 9) return 29;
+        if (ecart <= 10) return 27;
+        if (ecart <= 11) return 25;
+        if (ecart <= 12) return 23;
+        if (ecart <= 13) return 21;
+        if (ecart <= 14) return 19;
+        if (ecart <= 15) return 17;
+        if (ecart <= 16) return 14;
+        if (ecart <= 17) return 11;
+        if (ecart <= 18) return 8;
+        if (ecart <= 19) return 5;
+        if (ecart <= 20) return 2;
+        return 0;
+    }
+
+    // Fonction pour calculer les points d'écart de taux d'augmentations
+    function calculPointsAugmentations(ecart, effectifTotal) {
+        if (effectifTotal > 250) {
+            if (ecart <= 2) return 20;
+            if (ecart <= 5) return 10;
+            if (ecart <= 10) return 5;
+            return 0;
+        } else {
+            if (ecart <= 2) return 35;
+            if (ecart <= 5) return 25;
+            if (ecart <= 10) return 15;
+            return 0;
+        }
+    }
+
+    // Calcul des points
+    const pointsRemuneration = calculPointsRemuneration(ecartRemuneration);
+
+    // Calcul de l'écart de taux d'augmentations
+    const tauxAugmentationsFemmes = (femmesAugmentees / totalFemmes) * 100;
+    const tauxAugmentationsHommes = (hommesAugmentes / totalHommes) * 100;
+    const ecartAugmentations = Math.abs(tauxAugmentationsHommes - tauxAugmentationsFemmes);
+    const pointsAugmentations = calculPointsAugmentations(ecartAugmentations, effectifTotal);
+
+    // Calcul de l'écart de taux de promotions si applicable
+    let pointsPromotions = 0;
+
+if (effectifTotal > 250) {
+    // Calcul des taux de promotions
+    const tauxPromotionsFemmes = (femmesPromues / totalFemmes) * 100 || 0;
+    const tauxPromotionsHommes = (hommesPromus / totalHommes) * 100 || 0;
+
+    // Calcul de l'écart global de taux de promotions
+    const ecartPromotions = Math.abs(tauxPromotionsHommes - tauxPromotionsFemmes).toFixed(1);
+
+    // Attribution des points selon le barème
+    if (ecartPromotions <= 2) {
+        pointsPromotions = 15;
+    } else if (ecartPromotions <= 5) {
+        pointsPromotions = 10;
+    } else if (ecartPromotions <= 10) {
+        pointsPromotions = 5;
+    } else {
+        pointsPromotions = 0;
+    }
+}
+
+    // Points pour le congé maternité
+    const pointsConge = pctConge === 100 ? 15 : 0;
+
+    // Points pour la sous-représentation
+    let pointsSousRepresente = 0;
+    if (sousRepresente >= 4) {
+        pointsSousRepresente = 10;
+    } else if (sousRepresente >= 2) {
+        pointsSousRepresente = 5;
+    }
+
+    // Calcul de l'index final
+    const index = pointsRemuneration + pointsAugmentations + pointsPromotions + pointsConge + pointsSousRepresente;
+
+    // Afficher le résultat
+    const resultat = document.getElementById("resultat");
+    resultat.style.display = "block"; // Rendre visible la fenêtre
+    resultat.innerHTML = `
+        <p><strong>Détails des points obtenus :</strong></p>
+        <ul>
+            <li><strong>Écart de rémunération :</strong> ${pointsRemuneration} points</li>
+            <li><strong>Écart de taux d'augmentations :</strong> ${pointsAugmentations} points</li>
+            <li><strong>Écart de taux de promotions :</strong> ${pointsPromotions} points</li>
+            <li><strong>Congé maternité :</strong> ${pointsConge} points</li>
+            <li><strong>Sous-représentation parmi les 10 plus hautes rémunérations :</strong> ${pointsSousRepresente} points</li>
+        </ul>
+        <p><strong>Index Egapro total :</strong> ${index} points sur 100</p>
+    `;
+});
+
+</script>
+</body>
+</html>
