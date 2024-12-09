@@ -213,3 +213,79 @@ ul li a.active {
     font-weight: bold;
     color: #4CAF50;
 }
+
+/* Style pour le conteneur du calculateur */
+.calculateur-container {
+    margin: 20px auto;
+    max-width: 600px; /* Largeur maximale pour centrer le formulaire */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fond clair */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    font-size: 16px; /* Taille de texte agréable à lire */
+    text-align: left;
+}
+
+/* Style pour les labels */
+.calculateur-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style pour les champs de saisie */
+.calculateur-container input {
+    width: calc(100% - 20px); /* Remplit la largeur disponible */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px;
+    font-size: 14px; /* Taille de texte agréable */
+}
+
+/* Style pour le bouton de calcul */
+.calculateur-container button {
+    display: inline-block;
+    background-color: #4CAF50; /* Couleur principale */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover pour le bouton */
+.calculateur-container button:hover {
+    background-color: #45a049;
+}
+
+/* Style pour le résultat */
+#resultat {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eafbe4; /*
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#resultat ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+#resultat ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#resultat strong {
+    color: #4CAF50;
+}
