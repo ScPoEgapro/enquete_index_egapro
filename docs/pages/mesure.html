@@ -70,18 +70,178 @@
 
         <div class="content">
             <p align="justify">
-                Partie 2 : Mesure de l'index Egapro</p>
-                
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
-                Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.<sup><a href="#ref1">[1]</a></sup>
-                Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-                Vestibulum lacinia arcu eget nulla.<sup><a href="#ref2">[2]</a></sup> Class aptent taciti sociosqu ad
-                litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.
-                Sed dignissim lacinia nunc.<sup><a href="#ref3">[3]</a></sup>
-                <!-- Répétez et étendez le texte pour atteindre 1000 mots -->
-            </p>
+                Partie 2 : Mesure et fonctionnement de l'index Egapro</p>
+            <p>Nous avons vu dans quel contexte social et politique la nécessité d’un index mesurant les inégalités salariales basées sur le genre a émergé, et à quels besoins Egapro était censé répondre. La première étape pour y voir plus clair sur son impact sur la société est de comprendre sa mesure : pour qui est-il mesuré, comment, avec quelles conséquences ?</p>
+            <p>Le détail de la mesure se base sur une aide pour le calcul de l’index mise à la disposition des entreprises par le Ministère du Travail, que nous avons pu simplifier, illustrer et dont nous avons pu dériver les conséquences. Cette page a aussi servi de base à notre propre calculateur d’index Egapro, que vous pouvez retrouver ici.</p>
 
+    <p>A/ Qui est concerné par Egapro ?</p>
+    <p>Depuis le 1er mars 2020, l’index Egapro doit être calculé par toutes les entreprises, associations, syndicats et unités économiques et sociales (UES) de plus de 50 salariés avant le 1er mars de chaque année pour l’année précédente. L’année civile n’est pas une période de référence obligatoire : les données peuvent être calculées sur n’importe quelle période de 12 mois tant qu’elle se termine dans l’année précédant l’année de publication. En revanche, il est impossible de modifier cette période d’une année sur l’autre.</p>
+    <p>Les entreprises de moins de 50 salariés ne sont pas concernées par l’index, et les entreprises qui n’ont pas la capacité de fournir des données pour toutes ses dimensions ne sont pas tenues de le mesurer, mais simplement de fournir des résultats partiels. Nous reviendrons sur la non-calculabilité plus tard, puisqu’elle peut aussi être spécifique à un ou plusieurs indicateurs.</p>
+
+    <p>B/ Comment est calculé Egapro ?</p>
+    <p>Egapro est un index composite, c’est-à-dire qu’il mesure plusieurs dimensions d’un objet d’étude (ici, l’inégalité professionnelle). Il se compose donc de 4 ou 5 indicateurs, selon le nombre de salariés de l’entreprise. Ces indicateurs sont des notes qui sont attribuées aux dimensions étudiées, selon des barèmes spécifiques. À la fin du calcul, une note sur 100 est donnée à chaque entreprise, qui correspond à la somme de tous les indicateurs (à condition qu’ils aient été calculés). C’est cette note que l’on appelle « index Egapro ».</p>
+    <p>Rentrons désormais un peu plus dans le détail de chacun des indicateurs. Avant de décrire les barèmes, les catégories mesurées et les opérations réalisées seront détaillés à chaque fois.</p>
+
+    <p>i/ L’écart de rémunérations (/40)</p>
+    <p>Il s’agit de la somme des ratios entre les rémunérations des femmes et la rémunération des hommes dans chaque tranche d’âge et dans chaque catégorie socio-professionnelle (CSP ou PCS). La rémunération annuelle de chaque salarié est reconstituée en équivalent temps plein (ETP).</p>
+    <p>Les salariés sont ensuite répartis selon 4 tranches d’âges :</p>
+    <p>- Moins de 30 ans</p>
+    <p>- 30-39 ans</p>
+    <p>- 40-49 ans</p>
+    <p>- Plus de 50 ans</p>
+    <p>Ils sont aussi classés selon leurs catégories socio-professionnelles :</p>
+    <p>- Ouvriers</p>
+    <p>- Employés</p>
+    <p>- Techniciens/Agents de maîtrise</p>
+    <p>- Ingénieurs et cadres</p>
+    <p>L’écart des taux de rémunération est calculé séparément pour chaque paire tranche d’âge/CSP.</p>
+    <p>Deux choses importantes sont à prendre en compte :</p>
+    <p>- Si un groupe tranche d’âge/CSP contient moins de 3 hommes ou moins de 3 femmes, elle n’est pas prise en compte dans le calcul final.</p>
+    <p>- Les personnes chargées de la transmission des données de l’index Egapro au sein des entreprises peuvent choisir de classer les employés selon leurs propres catégories, à condition qu’elles aient été validées en amont par le Ministère du Travail.</p>
+    <p>La rémunération moyenne des femmes et des hommes dans chaque groupe est donnée par la formule suivante :</p>
+    <p><i>écartrém (%) = (Rh - Rf) / Rh * 100</i></p>
+    <p>Ces écarts sont ensuite ajustés en fonction d’un seuil de pertinence (5% si les CSP ont été retenues pour le calcul, 2% autrement), puis pondérés en fonction de l’effectif des groupes :</p>
+    <p><i>écartrém_pondéré (%) = écartrém_ajusté * (effectifgroupe / effectiftotal * 100)</i></p>
+    <p>Enfin, les écarts pondérés sont additionnés, et donnent l’écart global de rémunération en %. Celui-ci fait l’objet d’une note sur 40, déterminée par un barème dégressif : il attribue de moins en moins de points au fur et à mesure que le résultat final augmente, et n’en attribue plus à partir de 20% d’écart. Le maximum de 40/40 n’est atteint que s’il n’y a aucune différence de salaires (0%) selon ce modèle.</p>
+    <p>(Barème ETR)</p>
+
+    <p>ii/ L’écart des taux d’augmentations (/35, ou /20 pour les entreprises de plus de 250 salariés)</p>
+    <p>Il s’agit d’un écart en valeur absolue (qui ne prend pas en compte le signe positif ou négatif) entre les parts des hommes et des femmes qui ont reçu une augmentation parmi le total d’hommes et de femmes dans l’entreprise durant l’année de mesure.</p>
+    <p>Pour les hommes comme pour les femmes, le nombre de salariés augmentés est rapporté à l’effectif du genre concerné. L’indicateur n’est pas calculable si moins de 5 hommes ou moins de 5 femmes ont reçu une augmentation au cours de l’année passée.</p>
+    <p><i>tauxaug (%) = (effectifaugmenté / effectiftotal) * 100</i></p>
+    <p>Ces deux rapports sont soustraits l’un à l’autre pour obtenir l’écart des taux d’augmentations (en %). La valeur absolue de cet écart est conservée pour la suite.</p>
+    <p><i>écartaug (%) = |Tauxaug_f - Tauxaug_h|</i></p>
+    <p>Pour les entreprises de 250 salariés ou moins, cet écart est multiplié au plus petit effectif entre les femmes et les hommes pour obtenir un écart en équivalent salariés.</p>
+    <p>Seulement pour ces entreprises, la méthode la plus favorable (écart absolu ou en équivalent salariés) est sélectionnée pour l’attribution d’une note sur 35, qui se fait selon un barème à quatre niveaux. Pour obtenir le maximum de 35/35, le groupe augmenté du genre le plus augmenté doit être moins de 2% plus nombreux que celui du genre le moins augmenté, ou doit compter moins de 2 salariés supplémentaires (selon la méthode de l’équivalent salariés).</p>
+    <p>(Barème ETA1)</p>
+
+    <p>Pour les entreprises de plus de 250 salariés, il y a quelques différences :</p>
+    <p>- L’indicateur est calculé par CSP (semblable à l’écart des taux de rémunération ; non pris en compte pour les CSP avec une population inférieure à 10 femmes et 10 hommes).</p>
+    <p>- L’écart absolu est la seule méthode utilisable.</p>
+    <p>- Si moins de 40% des salariés ont été augmentés l’année passée, l’indicateur n’est pas mesurable.</p>
+    <p>- Le barème est différent : il ne permet que d’avoir un maximum de 20 points. Cela s’explique par la présence d’une autre variable dans le calcul de l’index Egapro pour ces entreprises : l’écart des taux de promotion.</p>
+    <p>(Barème ETA2)</p>
+
+            <p>iibis/ L’écart des taux de promotions (/15, uniquement pour les entreprises de plus de 250 salariés)</p>
+    <p>Il s’agit d’un écart entre les parts des hommes et des femmes ayant reçu une promotion (passage à un niveau ou coefficient hiérarchique supérieur) au cours de l’année de mesure.</p>
+
+    <p>Comme l’écart des taux d’augmentations, il est calculé par CSP (avec le même plancher de 10 femmes et 10 hommes par CSP) et doit cibler au moins 40% des salariés pour être calculable. La somme des écarts pondérés de chaque CSP donne l’écart des taux de promotions, qui est noté sur 15 points selon un barème à quatre niveaux. Pour avoir la note la plus haute, l’entreprise doit davantage promouvoir le genre le moins bien rémunéré, mais pas de plus de 2% par rapport à l’autre.</p>
+
+    <p>(Barème ETP)</p>
+
+    <p>iii/ Les augmentations après congé maternité</p>
+    <p>Il s’agit d’un ratio entre le nombre de femmes ayant été augmentées après un congé maternité (dans le cadre du rattrapage salarial) et le nombre de femmes concernées par ce congé.</p>
+    <p><i>ratiomat (%) = (effectifmat_aug / effectifmat_total) * 100</i></p>
+    <p>Le barème est beaucoup plus strict pour cet indicateur. Si le ratio est inférieur à 100%, l’entreprise ne marque aucun point ; sinon, elle en marque 15.</p>
+    <p>(Barème CM)</p>
+
+    <p>iv/ La représentation dans les 10 plus hautes rémunérations</p>
+    <p>Il s’agit du nombre de salariés du genre le moins représenté dans les 10 plus hauts salaires de l’entreprise dans la période de référence.</p>
+    <p>Le barème est à trois niveaux : si le genre sous-représenté a plus de 4 représentants sur 10, l’entreprise marque 10 points ; 5 points pour 2 ou 3 représentants ; et aucun pour 0 ou 1 représentant, les situations les moins paritaires.</p>
+    <p>(Barème R10)</p>
+
+    <p>v/ Calcul final de l’Index Egapro</p>
+    <p>Si tous les indicateurs ont pu être calculés, les points obtenus pour chacune des 4 ou 5 notes sont simplement additionnés pour donner la note sur 100 qui sert comme index Egapro.</p>
+    <p>Si un ou plusieurs indicateurs n’ont pas pu être calculés selon les règles vues plus haut, une règle de proportionnalité est appliquée (le total des points obtenus est ramené sur 100).</p>
+    <p>Si, avant application de la règle de proportionnalité, le nombre total de points pouvant être obtenus est inférieur à 75, l’indicateur est finalement considéré comme non-calculable.</p>
+    <p>(Poids des différents indicateurs dans le calcul de l’index Egapro / sur RStudio)</p>
+    <p>Pour les entreprises de 250 salariés ou moins :</p>
+    <p>Pour les entreprises de plus de 250 salariés :</p>
+
+            p>C/ Quelles sont les conséquences de l’index Egapro sur les entreprises ?</p>
+    <p>L’index Egapro est déclaratif, c’est-à-dire qu’il ne peut faire l’objet d’une mesure que lorsque les données nécessaires sont transmises par les entreprises concernées au Ministère du Travail et au Comité Social et Économique (CSE). Pour les aider dans ces démarches, elles peuvent compter sur un formulaire en ligne, qui peut s’accompagner d’une assistance en cas de problèmes. Le Ministère vérifie les données, effectue le calcul et publie les données Egapro (index et indicateurs, le cas échéant) de toutes les entreprises sur une page web accessible à tous. Les entreprises doivent également publier leurs résultats en interne et/ou via leur site, afin que leurs salariés puissent y avoir accès.</p>
+
+    <p>À ce stade, il est alors possible de distinguer deux types de conséquences de l’index Egapro pour les entreprises.</p>
+
+    <p>D’une part, elles doivent faire face à des instructions du Ministère du Travail en fonction des résultats obtenus :</p>
+
+    <p>L’index est mesurable, mais inférieur à 75 points</p>
+    <ul>
+        <li>L’entreprise doit fournir des mesures de correction adéquates et pertinentes pour atteindre au moins 75 points dans un délai de 3 ans.</li>
+        <li>L’entreprise doit publier l’index sur son site, ou à minima communiquer les résultats à ses salariés.</li>
+    </ul>
+
+    <p>L’index est mesurable, mais inférieur à 85 points</p>
+    <ul>
+        <li>L’entreprise doit fixer des objectifs de progression qui permettraient d’améliorer les indicateurs où la note maximale n’a pas été obtenue, pour arriver à 85 points (sans délai).</li>
+        <li>L’entreprise doit publier l’index sur son site, ou à minima communiquer les résultats à ses salariés.</li>
+    </ul>
+
+    <p>L’index est mesurable et compris entre 85 et 100 points</p>
+    <ul>
+        <li>Pas de problème.</li>
+        <li>L’entreprise doit publier l’index sur son site, ou à minima communiquer les résultats à ses salariés.</li>
+    </ul>
+
+    <p>L’index n’est pas mesurable</p>
+    <ul>
+        <li>L’entreprise doit faire des efforts pour rendre calculables les indicateurs qui ne le sont pas encore.</li>
+        <li>L’entreprise n’est pas tenue de publier son index, mais doit publier les notes obtenues aux indicateurs calculables.</li>
+    </ul>
+
+    <p>Par ailleurs, des formulaires existent aussi pour transmettre au Ministère les objectifs de progression ou les mesures de correction si l’index est trop faible.</p>
+
+    <p>En cas de non-transmission de la totalité des résultats attendus ou des documents supplémentaires demandés, les entreprises s’exposent en théorie à des sanctions financières qui peuvent aller jusqu’à 1% du chiffre d’affaires en vertu de l’article L2242-8 du Code du Travail.</p>
+
+    <p>D’autre part, l’accessibilité des résultats de chaque entreprise les place sous le regard de l’opinion publique. Là où celles qui ont des scores particulièrement hauts pourraient être tentées de s’en vanter (à raison), celles qui obtiennent des résultats plus faibles peuvent être épinglées et subir une dégradation de leur image, voire du <i>name and shame</i> (littéralement “nommer et éhonter”). Cet objectif, s’il n’est pas affiché dans les communications officielles, n’en est pas moins primordial : il apparaît dans de nombreux champs de l’élaboration des politiques publiques comme un instrument de la <i>compliance</i>, ou l’art de pousser un acteur à adopter un changement même si celui-ci est contraire à son intérêt.</p>
+
+            <p>D/ Un exemple concret : le PSG</p>
+    <p>Lors de notre interview, nous avons évoqué un exemple particulièrement marquant pour Corentin Poix et Laure Beaujot, celui du Paris Saint-Germain (PSG) qui comprend à la fois le club de football professionnel, mais aussi les équipes de handball, la section merchandising, une société d’exploitation, la fondation du club et un fond de dotation. En effet, le club a été ciblé par une sanction de 3 millions d’euros en (...) à cause de son index trop faible, ce qui a attiré l’attention d’autres pays selon nos deux interviewés. Il est d’ailleurs intéressant de constater qu’en 2024, le club a dépassé pour la première fois la barre des 75 points avec un index Egapro de 77/100.</p>
+
+    <p>Comme nous l’avons précisé précédemment, le club a été obligé de fournir le détail de chaque indicateur mesuré (donc, les cinq indicateurs, puisque le nombre de salariés est supérieur à 250). Il est donc intéressant d’expliquer la hausse des résultats du club indicateur par indicateur, entre 2023 et 2024 :</p>
+
+    <table border="1" cellspacing="0" cellpadding="8">
+        <thead>
+            <tr>
+                <th>Indicateur</th>
+                <th>Notes 2023</th>
+                <th>Notes 2024</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Écart de rémunération hommes/femmes</td>
+                <td>14/40</td>
+                <td>27/40</td>
+            </tr>
+            <tr>
+                <td>Écart des taux d’augmentations</td>
+                <td>20/20</td>
+                <td>20/20</td>
+            </tr>
+            <tr>
+                <td>Écart des taux de promotions</td>
+                <td>15/15</td>
+                <td>15/15</td>
+            </tr>
+            <tr>
+                <td>Augmentations après congé maternité</td>
+                <td>15/15</td>
+                <td>15/15</td>
+            </tr>
+            <tr>
+                <td>Représentation dans les 10 plus hautes rémunérations</td>
+                <td>0/10</td>
+                <td>0/10</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><strong>Index Egapro</strong></td>
+                <td><strong>64/100</strong></td>
+                <td><strong>77/100</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>Cette décomposition permet de constater que la hausse de l’index Egapro du club n’est liée qu’à une réduction des écarts de rémunération entre les femmes et les hommes, tous les autres indicateurs étant déjà au maximum, à l’exception notable de la place du groupe sous-représenté dans les 10 plus hautes rémunérations. Dans les mesures de progression, que le club est obligé de publier en raison de sa note insuffisante, il est d’ailleurs expliqué chaque année qu’une hausse de cette note est “incompatible avec le secteur du football professionnel”, où les hommes ont tendance à être beaucoup mieux payés que les femmes.</p>
+
+    <p>Cette différence est supposée encore plus élevée dans un club dont l’équipe masculine est régulièrement championne de France, avec des joueurs “stars” tels qu’Ousmane Dembélé cette année, ou Kylian Mbappé, Lionel Messi et Neymar Junior les années précédentes. À titre d’exemple, lors de la saison 2023-2024, cet effectif occupait à lui tout seul les 10 premières places des plus hauts salaires du championnat. Ce cas est donc reconnu comme un exemple de l’efficacité de l’index Egapro : il va plus loin que le “name and shame” et punit réellement les entreprises les plus inégalitaires, ce qui les pousse à améliorer leur situation.</p>
+
+    <p>Alors, on peut se demander : est-ce que ça fonctionne toujours aussi bien ? Est-ce que l’index Egapro pousse les entreprises à s’engager pour plus d’égalité salariale entre les genres ? Ou la réalité est-elle plus nuancée ? Passez à la partie 3 en cliquant ici !</p>
+
+
+            
             <!-- Intégration de l'image -->
             <figure>
                 <img src="https://kultt.fr/wp-content/uploads/2022/09/RickAstley-ad2022.jpg" alt="Graphique explicatif" style="max-width: 100%; height: auto;">
