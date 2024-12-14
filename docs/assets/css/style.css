@@ -124,6 +124,7 @@ main {
     max-height: calc(100vh - 200px);
     display: none;
     z-index: 101;
+    text-align: left;
 }
 
 .references-box h3, .summary-box h3 {
