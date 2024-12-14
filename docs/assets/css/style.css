@@ -188,16 +188,16 @@ ul li a.active {
 }
 
 
-.references-box, .summary-box ul li a {
+.references-box ul li a, .summary-box ul li a {
     color: #4CAF50;
     text-decoration: none;
 }
 
-.references-box, .summary-box ul li a:hover {
+.references-box ul li a:hover, .summary-box ul li a:hover {
     text-decoration: underline;
 }
 
-.references-box, .summary-box ul li a.active {
+.references-box ul li a.active, .summary-box ul li a.active {
     font-weight: bold;
     color: #4CAF50;
 }
