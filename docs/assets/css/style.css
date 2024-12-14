@@ -97,7 +97,7 @@ main {
 .references-toggle, .summary-toggle {
     width: 50px;
     height: 50px;
-    background-color: #4CAF50;
+    background-color: #00008B;
     color: white;
     display: flex;
     justify-content: center;
@@ -135,7 +135,7 @@ main {
     font-size: 16px;
     text-align: center;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #00008B;
     color: white;
     padding: 5px;
     border-radius: 3px;
@@ -150,7 +150,7 @@ main {
 
 .content a {
     text-decoration: none;
-    color: #4CAF50;
+    color: #00008B;
 }
 
 .content a:hover {
@@ -193,7 +193,7 @@ ul li a.active {
 
 
 .references-box ul li a, .summary-box ul li a {
-    color: #4CAF50;
+    color: #00008B;
     text-decoration: none;
 }
 
@@ -203,7 +203,7 @@ ul li a.active {
 
 .references-box ul li a.active, .summary-box ul li a.active {
     font-weight: bold;
-    color: #4CAF50;
+    color: #00008B;
 }
 
 .calculateur-container {
@@ -235,7 +235,7 @@ ul li a.active {
 
 .calculateur-container button {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #00008B;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -253,7 +253,7 @@ ul li a.active {
     margin-top: 20px;
     padding: 10px;
     background-color: #eafbe4; /*
-    border: 1px solid #4CAF50;
+    border: 1px solid #00008B;
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
@@ -273,5 +273,5 @@ ul li a.active {
 }
 
 #resultat strong {
-    color: #4CAF50;
+    color: #00008B;
 }
