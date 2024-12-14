@@ -8,10 +8,11 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(to right, #40E0D0, #00008B);
     color: white;
     padding: 20px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .header-logo {
@@ -20,6 +21,8 @@ header {
     position: absolute;
     top: 10px;
     right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -174,13 +177,14 @@ figcaption {
 }
 
 footer {
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
     position: relative;
     width: 100%;
     margin-top: 10px;
+    background: linear-gradient(to right, #40E0D0, #00008B);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 5px;
 }
 
 ul li a.active {
