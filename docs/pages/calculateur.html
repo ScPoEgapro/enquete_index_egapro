@@ -10,14 +10,14 @@
     
 <body>
         <header>
-    <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Enquête collective : L'index Egapro</a></h1>
-    <h2 style="margin-bottom: 5px;">La vie sociale des données - Semestre d'automne 2024-2025</h2>
+    <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Enquête collective : L’index Egapro</a></h1>
+    <h2 style="margin-bottom: 5px;">La vie sociale des données — Semestre d’automne 2024-2025</h2>
     <h3>
         Par 
-        <a href="mailto:xxx@xxx.xx" style="text-decoration: none; color: inherit;">Silas Delahaye</a>, 
-        <a href="mailto:xxx@xxx.xx" style="text-decoration: none; color: inherit;">Jeanne Jault</a>, 
-        <a href="mailto:xxx@xxx.xx" style="text-decoration: none; color: inherit;">Grégoire Kraoul-Riera</a>, 
-        <a href="mailto:xxx@xxx.xx" style="text-decoration: none; color: inherit;">Léa Romain</a>
+        <a href="https://fr.linkedin.com/in/silas-delahaye-34a884196" style="text-decoration: none; color: inherit;">Silas Delahaye</a>, 
+        <a href="https://fr.linkedin.com/in/jeanne-jault-8246b4275" style="text-decoration: none; color: inherit;">Jeanne Jault</a>, 
+        <a href="https://fr.linkedin.com/in/g-kr" style="text-decoration: none; color: inherit;">Grégoire Kraoul–Riera</a>, 
+        <a href="https://fr.linkedin.com/in/l%C3%A9a-romain" style="text-decoration: none; color: inherit;">Léa Romain</a>
     </h3>
 </header>
 
@@ -43,11 +43,11 @@
 <div class="summary-box" style="display: none;">
     <h3 onclick="toggleSummary()">Sommaire</h3>
     <ul>
-        <li><a href="../index.html">Page d'accueil</a></li>
+        <li><a href="../index.html">Page d’accueil</a></li>
         <li><a href="intro.html">Introduction</a></li>
-        <li><a href="historique.html">Partie 1 : Historique</a></li>
-        <li><a href="mesure.html">Partie 2 : Mesure</a></li>
-        <li><a href="limites.html">Partie 3 : Limites</a></li>
+        <li><a href="historique.html">Partie 1 : Historique</a></li>
+        <li><a href="mesure.html">Partie 2 : Mesure</a></li>
+        <li><a href="limites.html">Partie 3 : Limites et évolution</a></li>
         <li><a href="conclu.html">Conclusion</a></li>
         <li><a href="interview.html">Entretien</a></li>
         <li><a href="calculateur.html" class="active">Calculateur</a></li>
@@ -57,55 +57,55 @@
 
         <div class="content">
             <h1 align="justify">
-                Calculateur de l'index Egapro</h1>
-            <h2>À vous de jouer !</h2>
-            <p>Utilisez notre simulateur pour calculer l'index Egapro d'une entreprise réelle ou fictive à partir des informations nécessaires au calcul de chaque indicateur.</p>
+                Calculateur de l’index Egapro</h1>
+            <h2>À vous de jouer !</h2>
+            <p>Utilisez notre simulateur pour calculer l’index Egapro d’une entreprise réelle ou fictive à partir des informations nécessaires au calcul de chaque indicateur.</p>
             <p>Les données relatives aux promotions ne sont à remplir que pour les entreprises de plus de 250 salariés (total femmes + hommes).</p>
-            <p>Si ces cases sont remplies pour les entreprises de moins de 250 salariés, les données ne seront pas comptabilisées dans l'index final.</p>
-            <p>Tout est fidèle au modèle de calcul présent sur le site du Ministère du Travail <sup><a href="#ref1">[1]</a></sup>, sauf l'écart de rémunérations qui est simplifié (il ne prend pas en compte les catégories d'âges, ni les catégories socio-professionnelles).</p>
+            <p>Si ces cases sont remplies pour les entreprises de moins de 250 salariés, les données ne seront pas comptabilisées dans l’index final.</p>
+            <p>Tout est fidèle au modèle de calcul présent sur le site du ministère du Travail <sup><a href="#ref1">[1]</a></sup>, sauf l’écart de rémunérations qui est simplifié (il ne prend pas en compte les catégories d’âges, ni les catégories socio-professionnelles).</p>
 
         <form id="egapro-form">
-            <h2>Entrez les données de votre entreprise :</h2>
+            <h2>Entrez les données de votre entreprise :</h2>
 
-            <p><label for="total-femmes">Total de femmes :</label>
+            <p><label for="total-femmes">Total de femmes :</label>
             <input type="number" id="total-femmes" required></p>
 
-            <p><label for="total-hommes">Total d'hommes :</label>
+            <p><label for="total-hommes">Total d’hommes :</label>
             <input type="number" id="total-hommes" required></p>
 
             <h3>Rémunérations moyennes</h3>
-            <p><label for="remuneration-femmes">Rémunération annuelle moyenne des femmes (€) :</label>
+            <p><label for="remuneration-femmes">Rémunération annuelle moyenne des femmes (€) :</label>
             <input type="number" id="remuneration-femmes" required step="0.01"></p>
             
-            <p><label for="remuneration-hommes">Rémunération annuelle moyenne des hommes (€) :</label>
+            <p><label for="remuneration-hommes">Rémunération annuelle moyenne des hommes (€) :</label>
             <input type="number" id="remuneration-hommes" required step="0.01"></p>
 
             <h3>Augmentations individuelles</h3>
-            <p><label for="femmes-augmentees">Nombre de femmes augmentées :</label>
+            <p><label for="femmes-augmentees">Nombre de femmes augmentées :</label>
             <input type="number" id="femmes-augmentees" required></p>
 
-            <p><label for="hommes-augmentes">Nombre d'hommes augmentés :</label>
+            <p><label for="hommes-augmentes">Nombre d’hommes augmentés :</label>
             <input type="number" id="hommes-augmentes" required></p>
 
             <h3>Promotions (si applicable)</h3>
-            <p><label for="femmes-promues">Nombre de femmes promues :</label>
+            <p><label for="femmes-promues">Nombre de femmes promues :</label>
             <input type="number" id="femmes-promues"></p>
             
-            <p><label for="hommes-promus">Nombre d'hommes promus :</label>
+            <p><label for="hommes-promus">Nombre d’hommes promus :</label>
             <input type="number" id="hommes-promus"></p>
 
             <h3>Congé maternité</h3>
-            <p><label for="pct-conge">Pourcentage de salariées augmentées après congé maternité :</label>
+            <p><label for="pct-conge">Pourcentage de salariées augmentées après congé maternité :</label>
             <input type="number" id="pct-conge" required step="0.01"></p>
 
             <h3>Représentation parmi les 10 plus hautes rémunérations</h3>
-            <p><label for="sous-represente">Nombre de salariés sous-représentés :</label>
+            <p><label for="sous-represente">Nombre de salariés sous-représentés :</label>
             <input type="number" id="sous-represente" required></p>
 
-            <p><button type="button" id="calculer-index">Calculer l'index</button></p>
+            <p><button type="button" id="calculer-index">Calculer l’index</button></p>
         </form>
 
-        <h2>Résultat :</h2>
+        <h2>Résultat :</h2>
             <p id="resultat" style="display: none;"></p>                 
         </div>
     </main>
